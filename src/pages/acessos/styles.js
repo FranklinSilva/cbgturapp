@@ -36,6 +36,11 @@ export default styles = StyleSheet.create({
         backgroundColor: Variables.colors.whitesh,
 
     },
+    aboutCard:{
+        padding: 15,
+        backgroundColor: Variables.colors.white,
+        paddingBottom: 30
+    },
     normalCard: {
         marginVertical: 10,
         marginHorizontal: 20,
@@ -63,20 +68,27 @@ export default styles = StyleSheet.create({
         color: Variables.colors.regular,
         marginBottom: 10,
     },
+
+    museuTitle: {
+        fontSize: 18,
+        color: Variables.colors.dark,
+        marginBottom: 5,
+        textAlign: 'center'
+    },
+    museuObs: {
+        fontSize: 14,
+        color: Variables.colors.dark,
+        marginBottom: 5,
+        textAlign: 'center'
+    },
     pestana: {
-        width: 120,
-        height: 120,
+        width: 200,
+        height: 200,
         marginHorizontal: 5
     },
     patrocinio: {
         width: 150,
         height: 50,
-        marginHorizontal: 5
-
-    },
-    patrocinio2: {
-        width: 150,
-        height: 150,
         marginHorizontal: 5
 
     },
@@ -92,47 +104,4 @@ export default styles = StyleSheet.create({
         color: Variables.colors.white,
 
     },
-
-
-    card:{
-        marginHorizontal: 20,
-        marginVertical: 10,
-        padding: 15,
-        borderRadius: 3,
-        shadowColor: Variables.colors.whitesh,
-        shadowOffset: {
-            width: 0,
-            height: 1,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 2.84,
-        elevation: 3,
-        backgroundColor: Variables.colors.white
-    },
-    cardDisplayContainer:{
-        flexDirection: "row",
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        marginVertical: 10
-    },
-    icon:{
-        marginLeft: 15,
-    },
-    containerLeft:{
-        flexWrap: 'wrap',
-        flexDirection: 'column',
-        flex: 1
-    },
-    title: {
-        color: Variables.colors.regular,
-        fontSize: 16,
-        fontWeight: '600'
-    },
-
-    subTitle: {
-        color: Variables.colors.regular,
-        fontSize: 14,
-        fontWeight: '400'
-    },
-
 })

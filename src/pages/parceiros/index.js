@@ -5,7 +5,8 @@ import {
   } from 'react-native';
 
 import styles from './styles';
-import openMap from 'react-native-open-maps';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default class Evento extends Component {
     constructor(props) {
@@ -24,7 +25,12 @@ export default class Evento extends Component {
                 </View>
                 <View  style={styles.body}>
                     <ScrollView style={styles.aboutCard}>
-                        <Text style={styles.normalCardTitle}>Parceiros</Text>
+                        <TouchableOpacity onPress={() => this.props.navigation.goBack()} style={{flexDirection: 'row'}}>
+                            <FontAwesomeIcon style={{marginTop: 7}} color={Variables.colors.dark} size={20} icon={faAngleLeft} />
+
+                            <Text style={styles.normalCardTitle}>Parceiros</Text>
+
+                        </TouchableOpacity>
                         <Text style={styles.normalCardBody}>
                             Parceiros Oficiais do 39º Congresso Brasileiro de Guias de Turismo
                         </Text>

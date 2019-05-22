@@ -5,20 +5,20 @@ export default programacaoData = [
     [   
         {
             hour: "08:00 - 21:00",
-            title: "Credenciamento e Mostra de Turismo",
+            title: "Credenciamento e Entrega do Kit do Congressista",
             subtitle: "",
             image: "",
             icon: faStar,
-            obs: [], 
+            obs: ["Os responsáveis pelas caravanas tão acesso a retirar os kits"], 
             speakerId: 0
         },
         {
-            hour: "09:00",
-            title: "Entrega do Kit do Congressista",
+            hour: "08:00",
+            title: "Abertura Mostra de Turismo",
             subtitle: "",
             image: "",
-            icon: faBoxes,
-            obs: ["Os responsáveis pelas caravanas tão acesso a retirar os kits"], 
+            icon: faMapMarkedAlt,
+            obs: [], 
             speakerId: 0
         },
         {
@@ -41,7 +41,7 @@ export default programacaoData = [
         },
         {
             hour: "20:00",
-            title: "Abertura oficial e Coquetel de Boas Vindas",
+            title: "Abertura Oficial e Coquetel de Boas-Vindas",
             subtitle: "",
             image: "",
             icon: faCocktail,

@@ -8,6 +8,7 @@ import styles from './styles';
 import openMap from 'react-native-open-maps';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import moment from "moment";
 
 export default class Evento extends Component {
     constructor(props) {
@@ -31,6 +32,19 @@ export default class Evento extends Component {
                 </View>
                 <View  style={styles.body}>
                     <ScrollView>
+                        {moment().format('DDMMYYYY') >= '26052019' ?
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate("EventoAvaliacao", {formLink: 'https://docs.google.com/forms/d/1EKUf5CA9jt6g1kxS3xoC2CJlhvM0wTYmmhnhM0hBZXs/edit'})} style={styles.card}>
+                            <View style={styles.cardDisplayContainer}>
+                                <View style={styles.containerLeft}>
+                                    <Text style={styles.title}>Avalie o 39º CBGTUR</Text>
+                                    <Text style={styles.subTitle}>Sua opinião é muito importante para nós</Text>
+                                </View>
+                                <View style={styles.icon}>
+                                    <FontAwesomeIcon color={Variables.colors.dark} size={20} icon={faAngleRight} />
+                                </View>
+                            </View>
+                        </TouchableOpacity> : null }
+
                         <View style={styles.normalCard}>
                             <Text style={styles.normalCardTitle}>O Evento</Text>
                             <Text style={styles.normalCardBody}>
@@ -64,6 +78,17 @@ export default class Evento extends Component {
                             </TouchableOpacity>
                         </View>
 
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate("Acessos")} style={styles.card}>
+                            <View style={styles.cardDisplayContainer}>
+                                <View style={styles.containerLeft}>
+                                    <Text style={styles.title}>Congressista Cbgtur tem Acesso Gratuito a Pontos Turísticos da Cidade</Text>
+                                </View>
+                                <View style={styles.icon}>
+                                    <FontAwesomeIcon color={Variables.colors.dark} size={20} icon={faAngleRight} />
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+
                         <View style={styles.normalCard}>
                             <Text style={styles.normalCardTitle}>Dúvidas e Questionamentos?</Text>
                             <Text style={styles.normalCardBody}>
@@ -74,7 +99,7 @@ export default class Evento extends Component {
                         <View style={styles.normalCard}>
                             <Text style={styles.normalCardTitle}>Patrocínio</Text>
                             <View style={{flexDirection: 'column', justifyContent: "center", alignItems: "center", alignSelf: "center"}}>
-                                <Image resizeMode='contain' source={require('../../images/bahiatursa.jpg')} style={styles.patrocinio} />                
+                                <Image resizeMode='contain' source={require('../../images/bahiatursa.jpg')} style={styles.patrocinio2} />                
                                 <Image resizeMode='contain' source={require('../../images/secultssa.jpg')} style={styles.patrocinio} />                
                             </View>
                         </View>

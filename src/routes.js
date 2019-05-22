@@ -5,6 +5,7 @@ import { createBottomTabNavigator, createStackNavigator } from 'react-navigation
 
 import Evento from './pages/evento';
 import Parceiros from './pages/parceiros';
+import Acessos from './pages/acessos';
 import Palestrantes from './pages/palestrantes';
 import Palestrante from './pages/palestranteDetail';
 import Programacao from './pages/programacao';
@@ -61,6 +62,12 @@ const EventoStack = createStackNavigator({
     },
     Parceiros: {
         screen: Parceiros
+    },
+    EventoAvaliacao: {
+        screen: ActionExternal
+    },
+    Acessos: {
+        screen: Acessos
     }
 },
 {
